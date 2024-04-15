@@ -1,0 +1,98 @@
+:root {
+  font-size: 62.5%;
+  --primary-CSS: #08061c;
+  --secondary-CSS: #ededed;
+  --third-CSS: #7a0202;
+  --highlight-CSS: #d15305;
+  --smallspace-CSS: 0.5rem;
+  --mediumspace-CSS: 1rem;
+  --largespace-CSS: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #08061c;
+  color: #ededed;
+  font-size: 2rem;
+}
+body main section {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border: solid 1px;
+}
+@media (min-width: 1024px) {
+  body main section {
+    width: 80%;
+    height: 90vh;
+    flex-direction: row;
+  }
+  body main section button {
+    max-width: 48%;
+  }
+  body main section span img {
+    max-width: 30rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1023px) {
+  body main section {
+    width: 88%;
+    height: row;
+    flex-direction: row;
+  }
+  body main section button {
+    max-width: 46%;
+  }
+  body main section span img {
+    max-width: 40rem;
+  }
+}
+@media (max-width: 600px) {
+  body main section {
+    width: 96%;
+    height: auto;
+    flex-direction: column;
+    font-size: 1.6rem;
+  }
+}
+body main section button {
+  border: solid 0.2rem #d15305;
+  border-radius: 1rem;
+  margin: var(--mediumspace-CSS) 0;
+  padding: var(--mediumspace-CSS);
+  background-color: #7a0202;
+  width: 96%;
+  height: 10rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
+body main section .btn_01 {
+  color: var(--secondary-CSS);
+}
+body main section .btn_02 {
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #d15305;
+  border-radius: 5rem;
+  background-color: #7a0202;
+  color: #08061c;
+}
+body main section span {
+  margin: var(--mediumspace-CSS) 0;
+  padding: var(--mediumspace-CSS);
+  width: 90%;
+}
+body main section span img {
+  width: 100%;
+  float: left;
+  padding: 0.5rem 1.5rem;
+}/*# sourceMappingURL=main.css.map */

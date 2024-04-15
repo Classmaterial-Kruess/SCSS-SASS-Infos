@@ -1,0 +1,127 @@
+// basic Settings
+
+:root{
+    // Will handle the px -> rem problem
+    // 1rem = 16px by using 62.5% is 1rem = 10px so you dont need to re-calculate between px and rem
+    font-size: 62.5%;
+
+    // CSS Variables
+    --primary-CSS: #08061c;
+    --secondary-CSS: #ededed;
+    --third-CSS: #7a0202;
+    --highlight-CSS: #d15305;
+    --smallspace-CSS: 0.5rem;
+    --mediumspace-CSS: 1rem;
+    --largespace-CSS: 1.5rem;
+}
+
+// SCSS Variables
+$primary-SCSS: #08061c;
+$secondary-SCSS: #ededed;
+$third-SCSS: #7a0202;
+$highlight-SCSS: #d15305;
+$smallspace-SCSS: 0.5rem;
+$mediumspace-SCSS: 1rem;
+$largespace-SCSS: 1.5rem;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Mixin Logic
+  @import "./partials/mixin";
+
+// Styles
+
+body{
+    background-color: $primary-SCSS;
+    color: $secondary-SCSS;
+    font-size: 2rem; // 16px
+    main{
+        section{
+            @include flex;
+            @include breakpoints(desktop) {
+                width: 80%;
+                height: 90vh;
+                flex-direction: row;
+
+                button{
+                    max-width: 48%;
+                }
+
+                span{
+
+                    img{
+                        max-width: 30rem;
+                    }
+                }
+            }
+            @include breakpoints(tablet) {
+                width: 88%;
+                height: row;
+                flex-direction: row;
+
+                button{
+                    max-width: 46%;
+                }
+
+                span{
+
+                    img{
+                        max-width: 40rem;
+                    }
+                }
+            }
+            @include breakpoints(mobile){
+                width: 96%;
+                height: auto;
+                flex-direction: column;
+                font-size: 1.6rem;
+
+            }
+            
+            margin: $largespace-SCSS auto;
+            padding: $largespace-SCSS;
+            border: solid 1px;
+        
+            button{
+                @include border;
+                @include spacer;
+                background-color: $third-SCSS;
+                width: 96%;
+                height: 10rem;
+                font-size: 3rem;
+                font-weight: 600;
+            }
+
+            .btn_01{
+                
+                color: var(--secondary-CSS);
+            }
+
+            .btn_02{
+               @include borderWithParameters( 0.2rem );
+               background-color: $third-SCSS;
+               color: $primary-SCSS;
+            }
+
+            span{
+                @include spacer;
+                width: 90%;
+
+                
+                img{
+                    width: 100%;
+                    float: left;
+                    padding: $smallspace-SCSS $largespace-SCSS;
+                }
+            }
+          }
+    }
+}
+
+
+  
+  
